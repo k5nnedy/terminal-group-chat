@@ -21,7 +21,7 @@ public class ClientHandler implements Runnable {
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); // reader
             this.username = bufferedReader.readLine(); // reads from stream until username is read
             clientHandlerList.add(this);
-            broadcastMessage("SERVER "+ username + " has entered the chat.");
+            broadcastMessage("SERVER: "+ username + " has entered the chat.");
 
         } catch (IOException e) {
             // cloeses all of these when an exception happens
